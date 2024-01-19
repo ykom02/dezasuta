@@ -69,14 +69,12 @@ span {
 .aboutUs__inner {
     display: flex;
     gap: 8%;
+    align-items: center;
 }
 .aboutUs__img {
     width: calc(100% / 2);
     border-radius: 0 0 82px 0;
     height: 100%;
-}
-.aboutUs__wrapper {
-    padding-top: 60px;
 }
 .aboutUs__title__img {
     width: 272px;
@@ -120,7 +118,7 @@ span {
     font-size: 38px;
     color: #d30202;
     position: absolute;
-    top: 55%;
+    bottom: -13%;
     left: 13px;
 }
 .menu__inner__text {
@@ -188,7 +186,7 @@ iframe {
     margin: 0 auto;
     display: flex;
     gap: 63px;
-    padding: 80px 0;
+    padding: 80px 10px;
     background-color: #fff;
 }
 .footer__logo {
