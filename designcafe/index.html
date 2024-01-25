@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -28,8 +30,21 @@
                 </ul>
             </nav>
         </div>
+        <div class="sp-menu-btn"><span></span></div>
+        <nav class="header__nav-sp">
+            <ul>
+                <li><a href="#aboutUs">ABOUT US</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#event">EVENT</a></li>
+                <li><a href="#access">ACCESS</a></li>
+            </ul>
+        </nav>
         <div class="slider">
-            <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子">
+            <picture>
+                <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width: 767px)">
+                <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子">
+            </picture>
         </div>
     </header>
 
@@ -56,6 +71,23 @@
                         </p>
                     </div>
                 </div>
+                <!-- sp表示用 -->
+                <div class="aboutUs__inner-sp">
+                    <h2 class="aboutUs__title">
+                        <img src="./images/about_us@2x.png" class="aboutUs__title__img" alt="about us">
+                    </h2>
+                    <picture>
+                        <source srcset="./images/about_us@2x-100.jpg" media="(max-width: 767px)">
+                        <img src="./images/pc_about-100.jpg" class="aboutUs__img" alt="カフェ会社についてのイメージ画像">
+                    </picture>
+                    <div class="aboutUs__wrapper-sp">
+                        <h3 class="aboutUs__catch">私たちが提供する<br>こだわりのコーヒー</h3>
+                        <p class="aboutUs__text">
+                            サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+                        </p>
+                    </div>
+                </div>
+
             </section>
             <section class="menu" id="menu">
                 <h2 class="title">
@@ -167,6 +199,15 @@
         </p>
 
     </footer>
+
+    <script>
+        $(function () {
+            $(".sp-menu-btn").on("click", function () {
+                $(".header__nav-sp").fadeToggle();
+                $(".sp-menu-btn").toggleClass("open");
+            });
+        });
+    </script>
 </body>
 
 </html>
