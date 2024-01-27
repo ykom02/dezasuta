@@ -290,6 +290,11 @@ span {
 .menu__inner {
     width: 300px;
 }
+@media screen and (max-width: 768px) {
+    .menu__inner {
+        width: 100%;
+    }
+}
 .menu__img {
     position: relative;
 }
@@ -301,7 +306,7 @@ span {
     font-size: 38px;
     color: #d30202;
     position: absolute;
-    bottom: -13%;
+    bottom: -31px;
     left: 13px;
 }
 @media screen and (max-width: 767px) {
