@@ -501,3 +501,50 @@ iframe {
         bottom: 200px;
     }
 }
+
+/* スライダー */
+.slick-dots {
+    bottom: 0;
+}
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
+.slick-dots li button:before {
+    color: #fff;
+}
+
+/* ギャラリー部分スライドショー */
+/* 矢印ナビの位置調整 */
+.prev.slick-arrow {
+    z-index: 1;
+    position: absolute;
+    left: 22%;
+    top: 45%;
+}
+.next.slick-arrow {
+    z-index: 1;
+    position: absolute;
+    right: 22%;
+    top: 45%;
+}
+/* アイコンフォトの変更 */
+.prev {
+    border-top: solid 5px #fff;
+    border-left: solid 5px #fff;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-45deg);
+}
+.next {
+    border-top: solid 5px #fff;
+    border-right: solid 5px #fff;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+}
+
+/* モーダルウィンドウ(ライトボックス) */
+/* ページの非表示 */
+.lb-data .lb-details {
+    display: none;
+}

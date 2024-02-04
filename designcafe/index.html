@@ -7,9 +7,18 @@
     <title>デザインカフェ</title>
 
     <link rel="stylesheet" href="./css/reset.css">
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQueryの後にslickを読み込まないと打ち消してしまう -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"
+        type="text/javascript"></script>
 </head>
 
 <body>
@@ -41,10 +50,18 @@
             </ul>
         </nav>
         <div class="slider">
-            <picture>
-                <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width: 767px)">
-                <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子">
-            </picture>
+            <div>
+                <picture>
+                    <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width: 767px)">
+                    <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source srcset="./images/sp_main_vs_2@2x-100.jpg" media="(max-width: 767px)">
+                    <img src="./images/slider_2.jpg" alt="カフェ店内の様子">
+                </picture>
+            </div>
         </div>
     </header>
 
@@ -125,19 +142,34 @@
                 </h2>
                 <div class="gallery__slider">
                     <div class="slider__item">
-                        <img src="./images/pc_gallary_01-100.jpg" alt="コーヒー">
+                        <a href="./images/pc_gallary_01-100.jpg" data-lightbox="gallery">
+                            <img src="./images/pc_gallary_01-100.jpg" alt="コーヒー">
+                        </a>
                     </div>
                     <div class="slider__item">
-                        <img src="./images/pc_gallary_02-100.jpg" alt="カフェ店内の様子">
+                        <a href="./images/pc_gallary_02-100.jpg" data-lightbox="gallery">
+                            <img src="./images/pc_gallary_02-100.jpg" alt="カフェ店内の様子">
+                        </a>
                     </div>
                     <div class="slider__item">
-                        <img src="./images/pc_gallary_03-100.jpg" alt="カフェ店内の様子">
+                        <a href="./images/pc_gallary_03-100.jpg" data-lightbox="gallery">
+                            <img src="./images/pc_gallary_03-100.jpg" alt="カフェ店内の様子">
+                        </a>
                     </div>
                     <div class="slider__item">
-                        <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆">
+                        <a href="./images/pc_gallary_04-100.jpg" data-lightbox="gallery">
+                            <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆">
+                        </a>
                     </div>
                     <div class="slider__item">
-                        <img src="./images/pc_gallary_05-100.jpg" alt="カフェ店内の様子">
+                        <a href="./images/pc_gallary_05-100.jpg" data-lightbox="gallery">
+                            <img src="./images/pc_gallary_05-100.jpg" alt="カフェ店内の様子">
+                        </a>
+                    </div>
+                    <div class="slider__item">
+                        <a href="./images/pc_gallary_03-100.jpg" data-lightbox="gallery">
+                            <img src="./images/pc_gallary_03-100.jpg" alt="カフェ店内の様子">
+                        </a>
                     </div>
                 </div>
             </section>
@@ -202,12 +234,40 @@
 
     <script>
         $(function () {
+            //ハンバーガーメニュー
             $(".sp-menu-btn").on("click", function () {
                 $(".header__nav-sp").fadeToggle();
                 $(".sp-menu-btn").toggleClass("open");
             });
+            //スライドショー
+            $(".slider").slick({
+                autoplay: true,         //自動で画像が切り替わる設定
+                autoplaySpeed: 2000,    //2秒かけて替わる
+                dots: true,             //ページネーションの表示
+                arrows: false           //画像横に矢印が自動で出るのを消す
+            });
+            //ギャラリー部分スライドショー
+            $(".gallery__slider").slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                infinite: true, //スライドをループするかの設定
+                slidesToShow: 5, //スライドのエリアに画像を何枚表示するか
+                slidesToScroll: 1, //一度のスライドで切り替わる画像の数
+                arrows: true, //矢印アイコンを表示するかどうか
+                prevArrow: '<div class="prev"></div>', //「前へ」ボタンのhtml記述を指定
+                nextArrow: '<div class="next"></div>' //「次へ」ボタンのhtml記述を指定
+                // responsive: [
+                //     {
+                //         breakpoint: 768, // 767px以下のサイズに適用
+                //         settings: {
+                //             slidesToShow: 1,
+                //         },
+                //     },
+                // ],
+            });
         });
     </script>
+
 </body>
 
 </html>
