@@ -521,12 +521,27 @@ iframe {
     left: 22%;
     top: 45%;
 }
+@media screen and (max-width: 767px) {
+    .prev.slick-arrow {
+        left: 7%;
+    }
+}
 .next.slick-arrow {
     z-index: 1;
     position: absolute;
     right: 22%;
     top: 45%;
 }
+@media screen and (max-width: 767px) {
+    .next.slick-arrow {
+        right: 7%;
+    }
+}
+/* slickで自動入力される余白を消す */
+.slick-dotted.slick-slider {
+    margin-bottom: 0px;
+}
+
 /* アイコンフォトの変更 */
 .prev {
     border-top: solid 5px #fff;
