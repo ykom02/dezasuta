@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>制作一覧 | y.kom portfolio</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- slick -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+  <!-- font読み込み -->
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'sny3jxd',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+</head>
+
+<body>
+  <header id="header">
+    <picture class="work-header__img">
+      <source srcset="./images/header_sp@2x-50.jpg" media="(max-width: 767px)">
+      <img src="images/header_pc-50.jpg" alt="空">
+    </picture>
+    <div class="header__inner work-header__inner">
+      <h1 class="logo">
+        <a href="./index.html">
+          <p class="logo__top">y.kom</p>
+          <p class="logo__bottom">Portfolio</p>
+        </a>
+      </h1>
+      <nav class="header__nav">
+        <ul>
+          <li><a href="index.html#skill">できること</a></li>
+          <li><a href="work.html">制作物</a></li>
+          <li><a href="about.html">自己紹介</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="sp-menu__btn"><span></span></div>
+    <nav class="sp-header__nav">
+      <ul>
+        <li>
+          <h1 class="nav-logo">
+            <a href="./index.html">
+              <p class="logo__top">y.kom</p>
+              <p class="logo__bottom">Portfolio</p>
+            </a>
+          </h1>
+        </li>
+        <li><a href="index.html#skill">できること</a></li>
+        <li><a href="work.html">制作物</a></li>
+        <li><a href="about.html">自己紹介</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact__main">
+    <h2 class="section__title contact__title">お問い合わせ</h2>
+
+    <form
+      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfOYv5jmz_Ua3v8c1YisCkRclv2yauH8c7fWuELvAV5B2SNSA/formResponse"
+      method="POST">
+
+      <input name="entry.193574675" class="c-form__input" id="field-name" type="text" required="required" />
+
+      <input name="entry.899186120" class="c-form__input" id="field-mail" type="email" required="required" />
+
+      <input name="entry.421886929" class="c-form__input" id="field-subject" type="text" />
+
+      <textarea name="entry.314744645" class="c-form__input" id="field-message" placeholder="お問い合わせ内容"></textarea>
+
+    </form>
+  </main>
+
+  <img src="./images/pen_sen_pc.png" alt="線画">
+
+  <footer>
+    <footer class="footer__container">
+      <img src="./images/footer.png" alt="空">
+      <div class="footer__inner">
+        <h1 class="logo">
+          <a href="./index.html">
+            <p class="logo__top">y.kom</p>
+            <p class="logo__bottom">Portfolio</p>
+          </a>
+        </h1>
+        <nav class="footer__nav">
+          <ul>
+            <li><a href="index.html#skill">できること</a></li>
+            <li><a href="work.html">制作物</a></li>
+            <li><a href="about.html">自己紹介</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <p class="copy">© 2024 y.kom All Rights Reserved.</p>
+      </div>
+    </footer>
+  </footer>
+
+
+  <script>
+    $(function () {
+      //ハンバーガーメニュー
+      $(".sp-menu__btn").on("click", function () {
+        $(".sp-header__nav").fadeToggle();
+        $(".sp-menu__btn").toggleClass("open");
+      });
+    });
+  </script>
+</body>
+
+</html>

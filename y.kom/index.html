@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>y.kom portfolio</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- slick -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+  <!-- font読み込み -->
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'sny3jxd',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+</head>
+
+<body>
+  <header id="header">
+    <div class="header__inner">
+      <h1 class="logo">
+        <a href="./index.html">
+          <p class="logo__top">y.kom</p>
+          <p class="logo__bottom">Portfolio</p>
+        </a>
+      </h1>
+      <nav class="header__nav">
+        <ul>
+          <li><a href="#skill">できること</a></li>
+          <li><a href="work.html">制作物</a></li>
+          <li><a href="about.html">自己紹介</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="sp-menu__btn"><span></span></div>
+    <nav class="sp-header__nav">
+      <ul>
+        <li>
+          <h1 class="nav-logo">
+            <a href="./index.html">
+              <p class="logo__top">y.kom</p>
+              <p class="logo__bottom">Portfolio</p>
+            </a>
+          </h1>
+        </li>
+        <li><a href="#skill">できること</a></li>
+        <li><a href="work.html">制作物</a></li>
+        <li><a href="about.html">自己紹介</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- メインビジュアル -->
+    <div class="main__visual">
+      <picture class="main_sen">
+        <source srcset="./images/main_sen_sp@2x.png" media="(max-width: 767px)">
+        <img src="./images/main_sen.png" alt="手のイラスト">
+      </picture>
+      <div class="concept">
+        <h3 class="concept__heading">
+          ホームページを介して人と人をつなぐ
+        </h3>
+        <h4 class="concept__text">
+          「うまく言葉に出来ないけど･･･」に続く大事な部分を一緒に<br>
+          探して、訪れた人に伝わるホームページをつくります。
+        </h4>
+      </div>
+    </div>
+
+
+
+    <section class="skill" id="skill">
+      <h2 class="section__title">できること</h2>
+      <div class="skill__wrapper">
+        <div class="skill__inner">
+          <img src="./images/hearing@2x.png" class="skill__inner__img" alt="ヒアリングのアイコン">
+          <div class="skill__inner__item">
+            <h3 class="skill__inner__title">ヒアリング</h3>
+            <p class="skill__inner__text">ホームページを作るための土台作りを大切にします。
+              現状の課題や目的の共有はもちろん、魅力や雰囲気まで届けられるホームページを作るには事前準備が欠かせません。
+              前職である管理栄養士の仕事で培った傾聴力を活かして取り組みます。</p>
+          </div>
+        </div>
+        <div class="skill__inner">
+          <img src="./images/design@2x.png" class="skill__inner__img" alt="デザインのアイコン">
+          <div class="skill__inner__item">
+            <h3 class="skill__inner__title">デザイン</h3>
+            <p class="skill__inner__text">スマートフォンデバイスを想定したレスポンシブ対応のWebデザイン制作を行うことが可能です。
+              お客様の好まれる雰囲気や同じ業界のデザインを調べながら知識をストックし、「訪れた人にわかりやすい」デザインを心がけています。</p>
+            <p class="skill__inner__tool__design">
+              ツール：Illustrator、Photoshop</p>
+          </div>
+        </div>
+        <div class="skill__inner">
+          <img src="./images/coding@2x.png" class="skill__inner__img" alt="コーディングのアイコン">
+          <div class="skill__inner__item">
+            <h3 class="skill__inner__title">コーディング</h3>
+            <p class="skill__inner__text">HTML/CSSを使用しデザインを正しく再現します。またjQueryを用いて動きや効果のある魅力的なホームページを作成することも可能です。
+              見やすく管理しやすいコーディングを目指し、勉強中です。</p>
+            <p class="skill__inner__tool__coding">
+              ツール： Visual Studio Code</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 線画 -->
+    <img src="./images/2nd_sen_pc.png" class="sen__2nd" alt="線画">
+
+    <!-- work -->
+    <section class="work" id="work">
+      <h2 class="section__title">制作物</h2>
+      <!-- 制作物上段 -->
+      <div class="work__top slider">
+        <!-- 1つ目 -->
+        <div class="work__item">
+          <div class="work__item__area">
+            <a href="">
+              <img src="./images/kadai4_komura.jpg" class="work__item__img" alt="WORKERS様">
+              <div class="hover__mask">
+                <p class="hover__mask__category">トレース</p>
+                <p class="hover__mask__tool">Illustrator</p>
+              </div>
+            </a>
+          </div>
+          <div class="work__item__bottom">
+            <p class="work__category work__category__web">WEB</p>
+            <div class="work__title">
+              <p class="work__title__sub">トレース/LP</p>
+              <p class="work__title__main">WORKERS様</p>
+            </div>
+          </div>
+        </div>
+        <!-- 2つ目 -->
+        <div class="work__item">
+          <div class="work__item__area">
+            <a href="">
+              <img src="./images/kadai5_komura.jpg" class="work__item__img" alt="LIFE hair design様">
+              <div class="hover__mask">
+                <p class="hover__mask__category">デザイン</p>
+                <p class="hover__mask__tool">Illustrator，Photoshop</p>
+              </div>
+            </a>
+          </div>
+          <div class="work__item__bottom">
+            <p class="work__category work__category__web">WEB</p>
+            <div class="work__title">
+              <p class="work__title__sub">架空美容室サイト</p>
+              <p class="work__title__main">LIFE hair design様</p>
+            </div>
+          </div>
+        </div>
+        <!-- 3つ目 -->
+        <div class="work__item">
+          <div class="work__item__area">
+            <a href="">
+              <img src="./images/designcafe_komura.jpg" class="work__item__img" alt="DESIGN CAFE様">
+              <div class="hover__mask">
+                <p class="hover__mask__category">コーディング</p>
+                <p class="hover__mask__tool">Illustrator，Visual Studio Code</p>
+              </div>
+            </a>
+          </div>
+          <div class="work__item__bottom">
+            <p class="work__category work__category__web">WEB</p>
+            <div class="work__title">
+              <p class="work__title__sub">架空カフェサイト</p>
+              <p class="work__title__main">DESIGN CAFE様</p>
+            </div>
+          </div>
+        </div>
+        <!-- 4つ目 -->
+        <div class="work__item">
+          <div class="work__item__area">
+            <a href="">
+              <img src="./images/portfolio_komura.jpg" class="work__item__img" alt="ポートフォリオ">
+              <div class="hover__mask">
+                <p class="hover__mask__category">デザイン、コーディング</p>
+                <p class="hover__mask__tool">Illustrator，Photoshop<br>Visual Studio Code</p>
+              </div>
+            </a>
+          </div>
+          <div class="work__item__bottom">
+            <p class="work__category work__category__web">WEB</p>
+            <div class="work__title">
+              <p class="work__title__sub">本サイト</p>
+              <p class="work__title__main">ポートフォリオ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 制作物下段 -->
+      <div class="work__bottom slider">
+        <!-- 1つ目 -->
+        <div class="work__item">
+          <div class="work__item__area">
+            <a href="">
+              <img src="./images/kadai1_komura_banner.jpg" class="work__item__img" alt="キャンペーンバナー">
+              <div class="hover__mask">
+                <p class="hover__mask__category">トレース</p>
+                <p class="hover__mask__tool">Illustrator，Photoshop</p>
+              </div>
+            </a>
+          </div>
+          <div class="work__item__bottom">
+            <p class="work__category work__category__banner">BANNER</p>
+            <div class="work__title">
+              <p class="work__title__sub">トレース</p>
+              <p class="work__title__main">キャンペーンバナー</p>
+            </div>
+          </div>
+        </div>
+        <!-- 2つ目 -->
+        <div class="work__item">
+          <div class="work__item__area">
+            <a href="">
+              <img src="./images/kadai2_komura_banner.jpg" class="work__item__img work__item__img__square" alt="広告バナー">
+              <div class="hover__mask">
+                <p class="hover__mask__category">トレース</p>
+                <p class="hover__mask__tool">Illustrator，Photoshop</p>
+              </div>
+            </a>
+          </div>
+          <div class="work__item__bottom">
+            <p class="work__category work__category__banner">BANNER</p>
+            <div class="work__title">
+              <p class="work__title__sub">トレース</p>
+              <p class="work__title__main">広告バナー</p>
+            </div>
+          </div>
+        </div>
+        <!-- 3つ目 -->
+        <div class="work__item">
+          <div class="work__item__area">
+            <a href="">
+              <img src="./images/kadai3_komura_rich.jpg" class="work__item__img" alt="架空広告バナー">
+              <div class="hover__mask">
+                <p class="hover__mask__category">デザイン</p>
+                <p class="hover__mask__tool">Illustrator，Photoshop</p>
+              </div>
+            </a>
+          </div>
+          <div class="work__item__bottom work__category__banner">
+            <p class="work__category">BANNER</p>
+            <div class="work__title">
+              <p class="work__title__sub">デザイン</p>
+              <p class="work__title__main">架空広告バナー</p>
+            </div>
+          </div>
+        </div>
+        <!-- 4つ目 -->
+        <div class="work__item">
+          <div class="work__item__area">
+            <a href="">
+              <img src="./images/kadai3_komura_pop.jpg" class="work__item__img work__item__img__square" alt="架空広告バナー">
+              <div class="hover__mask">
+                <p class="hover__mask__category">デザイン</p>
+                <p class="hover__mask__tool">Illustrator，Photoshop</p>
+              </div>
+            </a>
+          </div>
+          <div class="work__item__bottom work__category__banner">
+            <p class="work__category">BANNER</p>
+            <div class="work__title">
+              <p class="work__title__sub">デザイン</p>
+              <p class="work__title__main">架空広告バナー</p>
+            </div>
+          </div>
+        </div>
+        <!-- 5つ目 -->
+        <div class="work__item">
+          <div class="work__item__area">
+            <a href="">
+              <img src="./images/adobe_kadai.jpg" class="work__item__img work__item__img__square" alt="架空広告バナー">
+              <div class="hover__mask">
+                <p class="hover__mask__category">企画，デザイン</p>
+                <p class="hover__mask__tool">Photoshop</p>
+              </div>
+            </a>
+          </div>
+          <div class="work__item__bottom work__category__banner">
+            <p class="work__category">BANNER</p>
+            <div class="work__title">
+              <p class="work__title__sub">デザイン</p>
+              <p class="work__title__main">架空広告バナー</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ボタン -->
+      <div class="button__container">
+        <a href="work.html" class="more__button work__more__button">すべて見る</a>
+      </div>
+    </section>
+
+    <!-- 線画 -->
+    <img src="./images/3rd_sen_pc.png" class="sen__3rd" alt="線画">
+
+    <!-- about -->
+    <section class="about" id="about">
+      <h2 class="section__title">自己紹介</h2>
+      <picture class="about__pic">
+        <source srcset="./images/board_sen_sp@2x.png" media="(max-width: 767px)">
+        <source srcset="./images/board_sen_tab@2x.png" media="(max-width: 889px)">
+        <img src="./images/board_sen_pc.png" class="board_sen" alt="線画">
+      </picture>
+      <div class="about__wrapper">
+        <div class="about__inner">
+          <div class="about__name">コムラ</div>
+          <p class="about__text">岡山県出身。桃と猫が好きです。<br>
+            2023年よりWebデザイン、コーディングを勉強しています。<br>
+            医療職、事務職で培った強みをベースに、訪れた人に想いが伝わるホームページ作りを目指しています。
+          </p>
+          <!-- PCボタン -->
+          <div class="button__container about__pc__button__container">
+            <a href="about.html" class="more__button about__pc__more__button">もう少し知る</a>
+          </div>
+        </div>
+        <div class="about__img">
+          <img src="./images/about@2x-50.jpg" alt="コムラ">
+        </div>
+      </div>
+      <!-- SPボタン -->
+      <div class="button__container about__sp__button__container">
+        <a href="about.html" class="more__button about__sp__more__button">もう少し知る</a>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="section__title">お問い合わせ</h2>
+      <p class="contact__text">ご質問やお仕事のご依頼など、お気軽にご連絡ください。<br>
+        ご連絡は下記お問い合わせフォームよりご連絡をお願いいたします。
+      </p>
+      <div class="button__container contact__button__container">
+        <a href="" class="more__button contact__more__button">お問い合わせはこちら</a>
+      </div>
+      <img src="./images/pen_sen_pc.png" alt="線画">
+    </section>
+  </main>
+  <footer>
+    <footer class="footer__container">
+      <img src="./images/footer.png" alt="空">
+      <div class="footer__inner">
+        <h1 class="logo">
+          <a href="./index.html">
+            <p class="logo__top">y.kom</p>
+            <p class="logo__bottom">Portfolio</p>
+          </a>
+        </h1>
+        <nav class="footer__nav">
+          <ul>
+            <li><a href="#skill">できること</a></li>
+            <li><a href="work.html">制作物</a></li>
+            <li><a href="about.html">自己紹介</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <p class="copy">© 2024 y.kom All Rights Reserved.</p>
+      </div>
+    </footer>
+  </footer>
+
+
+  <script>
+    $(function () {
+      //ハンバーガーメニュー
+      $(".sp-menu__btn").on("click", function () {
+        $(".sp-header__nav").fadeToggle();
+        $(".sp-menu__btn").toggleClass("open");
+      });
+      //スライドショー
+      $(".slider").slick({
+        variableWidth: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        prevArrow: '<div class="prev"></div>',
+        nextArrow: '<div class="next"></div>',
+        responsive: [
+          {
+            breakpoint: 1200, // 1199px以下のサイズに適用
+            settings: {
+              slidesToShow: 2,
+            },
+          }, {
+            breakpoint: 870, //869px以下のサイズに適用
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+      //画面サイズが再度870pxを超えた際にスライドショーを再開する
+      $(window).on("resize orientationchange", function () {
+        $(".slider").slick("resize");
+      });
+    });
+  </script>
+</body>
+
+</html>

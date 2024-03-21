@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>制作一覧 | y.kom portfolio</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- slick -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+  <!-- font読み込み -->
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'sny3jxd',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+</head>
+
+<body>
+  <header id="header">
+    <picture class="work-header__img">
+      <source srcset="./images/header_sp@2x-50.jpg" media="(max-width: 767px)">
+      <img src="images/header_pc-50.jpg" alt="空">
+    </picture>
+    <div class="header__inner work-header__inner">
+      <h1 class="logo">
+        <a href="./index.html">
+          <p class="logo__top">y.kom</p>
+          <p class="logo__bottom">Portfolio</p>
+        </a>
+      </h1>
+      <nav class="header__nav">
+        <ul>
+          <li><a href="index.html#skill">できること</a></li>
+          <li><a href="#">制作物</a></li>
+          <li><a href="about.html">自己紹介</a></li>
+          <li><a href="index.html#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="sp-menu__btn"><span></span></div>
+    <nav class="sp-header__nav">
+      <ul>
+        <li>
+          <h1 class="nav-logo">
+            <a href="./index.html">
+              <p class="logo__top">y.kom</p>
+              <p class="logo__bottom">Portfolio</p>
+            </a>
+          </h1>
+        </li>
+        <li><a href="index.html#skill">できること</a></li>
+        <li><a href="#">制作物</a></li>
+        <li><a href="about.html">自己紹介</a></li>
+        <li><a href="index.html#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="work__main">
+    <div class="breadcrumb__area">
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb__item"><a href="index.html">TOP</a></li>
+          <li class="breadcrumb__item"><a href="#">制作一覧</a></li>
+        </ol>
+      </nav>
+    </div>
+    <h2 class="section__title all__work__title">制作物</h2>
+
+    <!-- 制作一覧 -->
+    <section class="work all__work" id="work">
+      <!-- 1つ目 -->
+      <div class="work__item all__work__item">
+        <div class="work__item__area">
+          <a href="">
+            <img src="./images/kadai4_komura.jpg" class="work__item__img" alt="WORKERS様">
+            <div class="hover__mask">
+              <p class="hover__mask__category">トレース</p>
+              <p class="hover__mask__tool">Illustrator</p>
+            </div>
+          </a>
+        </div>
+        <div class="work__item__bottom">
+          <p class="work__category work__category__web">WEB</p>
+          <div class="work__title">
+            <p class="work__title__sub">トレース/LP</p>
+            <p class="work__title__main">WORKERS様</p>
+          </div>
+        </div>
+      </div>
+      <!-- 2つ目 -->
+      <div class="work__item all__work__item">
+        <div class="work__item__area">
+          <a href="">
+            <img src="./images/kadai5_komura.jpg" class="work__item__img" alt="LIFE hair design様">
+            <div class="hover__mask">
+              <p class="hover__mask__category">デザイン</p>
+              <p class="hover__mask__tool">Illustrator，Photoshop</p>
+            </div>
+          </a>
+        </div>
+        <div class="work__item__bottom">
+          <p class="work__category work__category__web">WEB</p>
+          <div class="work__title">
+            <p class="work__title__sub">架空美容室サイト</p>
+            <p class="work__title__main">LIFE hair design様</p>
+          </div>
+        </div>
+      </div>
+      <!-- 3つ目 -->
+      <div class="work__item all__work__item">
+        <div class="work__item__area">
+          <a href="">
+            <img src="./images/designcafe_komura.jpg" class="work__item__img" alt="DESIGN CAFE様">
+            <div class="hover__mask">
+              <p class="hover__mask__category">コーディング</p>
+              <p class="hover__mask__tool">Illustrator，Visual Studio Code</p>
+            </div>
+          </a>
+        </div>
+        <div class="work__item__bottom">
+          <p class="work__category work__category__web">WEB</p>
+          <div class="work__title">
+            <p class="work__title__sub">架空カフェサイト</p>
+            <p class="work__title__main">DESIGN CAFE様</p>
+          </div>
+        </div>
+      </div>
+      <!-- 4つ目 -->
+      <div class="work__item all__work__item">
+        <div class="work__item__area">
+          <a href="">
+            <img src="./images/portfolio_komura.jpg" class="work__item__img" alt="ポートフォリオ">
+            <div class="hover__mask">
+              <p class="hover__mask__category">デザイン、コーディング</p>
+              <p class="hover__mask__tool">Illustrator，Photoshop<br>Visual Studio Code</p>
+            </div>
+          </a>
+        </div>
+        <div class="work__item__bottom">
+          <p class="work__category work__category__web">WEB</p>
+          <div class="work__title">
+            <p class="work__title__sub">本サイト</p>
+            <p class="work__title__main">ポートフォリオ</p>
+          </div>
+        </div>
+      </div>
+      <!-- 5つ目 -->
+      <div class="work__item all__work__item">
+        <div class="work__item__area">
+          <a href="">
+            <img src="./images/kadai1_komura_banner.jpg" class="work__item__img" alt="キャンペーンバナー">
+            <div class="hover__mask">
+              <p class="hover__mask__category">トレース</p>
+              <p class="hover__mask__tool">Illustrator，Photoshop</p>
+            </div>
+          </a>
+        </div>
+        <div class="work__item__bottom">
+          <p class="work__category work__category__banner">BANNER</p>
+          <div class="work__title">
+            <p class="work__title__sub">トレース</p>
+            <p class="work__title__main">キャンペーンバナー</p>
+          </div>
+        </div>
+      </div>
+      <!-- 6つ目 -->
+      <div class="work__item all__work__item">
+        <div class="work__item__area">
+          <a href="">
+            <img src="./images/kadai2_komura_banner.jpg" class="work__item__img work__item__img__square" alt="広告バナー">
+            <div class="hover__mask">
+              <p class="hover__mask__category">トレース</p>
+              <p class="hover__mask__tool">Illustrator，Photoshop</p>
+            </div>
+          </a>
+        </div>
+        <div class="work__item__bottom">
+          <p class="work__category work__category__banner">BANNER</p>
+          <div class="work__title">
+            <p class="work__title__sub">トレース</p>
+            <p class="work__title__main">広告バナー</p>
+          </div>
+        </div>
+      </div>
+      <!-- 7つ目 -->
+      <div class="work__item all__work__item">
+        <div class="work__item__area">
+          <a href="">
+            <img src="./images/kadai3_komura_rich.jpg" class="work__item__img" alt="架空広告バナー">
+            <div class="hover__mask">
+              <p class="hover__mask__category">デザイン</p>
+              <p class="hover__mask__tool">Illustrator，Photoshop</p>
+            </div>
+          </a>
+        </div>
+        <div class="work__item__bottom work__category__banner">
+          <p class="work__category">BANNER</p>
+          <div class="work__title">
+            <p class="work__title__sub">デザイン</p>
+            <p class="work__title__main">架空広告バナー</p>
+          </div>
+        </div>
+      </div>
+      <!-- 8つ目 -->
+      <div class="work__item all__work__item">
+        <div class="work__item__area">
+          <a href="">
+            <img src="./images/kadai3_komura_pop.jpg" class="work__item__img work__item__img__square" alt="架空広告バナー">
+            <div class="hover__mask">
+              <p class="hover__mask__category">企画，デザイン</p>
+              <p class="hover__mask__tool">Photoshop</p>
+            </div>
+            <div class="hover__mask">
+              <p class="hover__mask__category">デザイン</p>
+              <p class="hover__mask__tool">Illustrator，Photoshop</p>
+            </div>
+          </a>
+        </div>
+        <div class="work__item__bottom work__category__banner">
+          <p class="work__category">BANNER</p>
+          <div class="work__title">
+            <p class="work__title__sub">デザイン</p>
+            <p class="work__title__main">架空広告バナー</p>
+          </div>
+        </div>
+      </div>
+      <!-- 9つ目 -->
+      <div class="work__item all__work__item">
+        <div class="work__item__area">
+          <a href="">
+            <img src="./images/adobe_kadai.jpg" class="work__item__img work__item__img__square" alt="架空広告バナー">
+          </a>
+        </div>
+        <div class="work__item__bottom work__category__banner">
+          <p class="work__category">BANNER</p>
+          <div class="work__title">
+            <p class="work__title__sub">デザイン</p>
+            <p class="work__title__main">架空広告バナー</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <p class="all__work__text">
+      その他コーディング学習中作成し、規約により非公開としているものもあります。<br>
+      ご希望の方は<a href="#" class="all__work__link">お問い合わせ</a>よりご連絡ください。
+    </p>
+  </main>
+
+  <img src="./images/pen_sen_pc.png" alt="線画">
+
+  <footer>
+    <footer class="footer__container">
+      <img src="./images/footer.png" alt="空">
+      <div class="footer__inner">
+        <h1 class="logo">
+          <a href="./index.html">
+            <p class="logo__top">y.kom</p>
+            <p class="logo__bottom">Portfolio</p>
+          </a>
+        </h1>
+        <nav class="footer__nav">
+          <ul>
+            <li><a href="index.html#skill">できること</a></li>
+            <li><a href="work.html">制作物</a></li>
+            <li><a href="about.html">自己紹介</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <p class="copy">© 2024 y.kom All Rights Reserved.</p>
+      </div>
+    </footer>
+  </footer>
+
+
+  <script>
+    $(function () {
+      //ハンバーガーメニュー
+      $(".sp-menu__btn").on("click", function () {
+        $(".sp-header__nav").fadeToggle();
+        $(".sp-menu__btn").toggleClass("open");
+      });
+    });
+  </script>
+</body>
+
+</html>
