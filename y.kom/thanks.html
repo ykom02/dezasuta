@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>お問い合わせ | y.kom portfolio</title>
+  <title>ありがとうございます | y.kom portfolio</title>
 
   <link rel="stylesheet" href="./css/reset.css">
   <!-- slick -->
@@ -60,41 +60,21 @@
     </nav>
   </header>
 
-  <main class="contact__main">
-    <h2 class="section__title contact__title">お問い合わせ</h2>
-    <p class="contact__page__text">ご質問やお仕事のご相談など、お気軽にご連絡ください。<br>
-      下記フォームにご記入後、送信をお願いいたします。<br>
-      2～3日中に返信いたします。</p>
+  <main>
+    <div class="thanks__wrapper">
+      <p class="thanks__text">お問い合わせいただきありがとうございました。<br>
+        3日を過ぎても返事がない場合は<br>
+        お手数ですが再度お問い合わせフォームより<br>
+        ご連絡いただけますようお願いいたします。
+      </p>
 
-    <form
-      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfOYv5jmz_Ua3v8c1YisCkRclv2yauH8c7fWuELvAV5B2SNSA/formResponse"
-      method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
+      <img src="./images/letter_sen.png" class="letter_sen" alt="線画">
 
-      <div class="c-form__item">
-        <label class="c-form__label" for="field-name">お名前<span class="c-form__required">（必須）</span></label>
-        <input name="entry.193574675" class="c-form__input" id="field-name" type="text" required="required" />
+      <div class="button__container contact__button__container">
+        <a href="index.html" class="more__button contact__more__button">トップページへ戻る</a>
       </div>
+    </div>
 
-      <div class="c-form__item">
-        <label class="c-form__label" for="field-mail">メールアドレス<span class="c-form__required">（必須）</span></label>
-        <input name="entry.899186120" class="c-form__input" id="field-mail" type="email" required="required" />
-      </div>
-
-      <div class="c-form__item">
-        <label class="c-form__label" for="field-subject">件名</label>
-        <input name="entry.421886929" class="c-form__input" id="field-subject" type="text" />
-      </div>
-
-      <div class="c-form__item">
-        <label class="c-form__label" for="field-message">お問い合わせ内容<span class="c-form__required">（必須）</span></label>
-        <textarea name="entry.314744645" class="c-form__input" id="field-message"></textarea>
-      </div>
-
-      <div class="c-form__submit">
-        <button type="submit" class="more__button c-form__button">送信する</button>
-      </div>
-
-    </form>
     <picture>
       <source srcset="./images/pen_sen_sp@2x.png" media="(max-width: 767px)">
       <img src="./images/pen_sen_pc.png" alt="線画">
@@ -162,12 +142,6 @@
       });
     });
   </script>
-
-  <script type="text/javascript">
-    let submitted = false;
-  </script>
-  <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
-    onload="if(submitted){window.location='thanks.html';}"></iframe>
 </body>
 
 </html>

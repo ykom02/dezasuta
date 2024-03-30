@@ -17,18 +17,6 @@
   <!-- slick -->
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-
-  <!-- font読み込み -->
-  <script>
-    (function (d) {
-      var config = {
-        kitId: 'sny3jxd',
-        scriptTimeout: 3000,
-        async: true
-      },
-        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-    })(document);
-  </script>
 </head>
 
 <body>
@@ -78,7 +66,8 @@
       <h2 class="section__title about__title">自己紹介</h2>
       <picture class="about__pic about__page__pic">
         <source srcset="./images/board_sen_sp@2x.png" media="(max-width: 767px)">
-        <source srcset="./images/board_sen_tab@2x.png" media="(max-width: 889px)">
+        <source srcset="./images/board_sen_tab_center@2x.png" media="(max-width: 889px)">
+        <source srcset="./images/board_sen_long.png" media="(min-width: 1800px)">
         <img src="./images/board_sen_pc.png" class="board_sen" alt="線画">
       </picture>
       <div class="about__wrapper about__page__wrapper">
@@ -137,13 +126,18 @@
       </p>
     </section>
 
+    <picture>
+      <source srcset="./images/pen_sen_sp@2x.png" media="(max-width: 767px)">
+      <img src="./images/pen_sen_pc.png" alt="線画">
+    </picture>
   </main>
-
-  <img src="./images/pen_sen_pc.png" alt="線画">
 
   <footer>
     <footer class="footer__container">
-      <img src="./images/footer.png" alt="空">
+      <picture class="footer__bg">
+        <source srcset="./images/footer_sp@2x.png" media="(max-width: 767px)">
+        <img src="./images/footer.png" alt="空">
+      </picture>
       <div class="footer__inner">
         <h1 class="logo">
           <a href="./index.html">
@@ -153,19 +147,44 @@
         </h1>
         <nav class="footer__nav">
           <ul>
-            <li><a href="index.html#skill">できること</a></li>
+            <li><a href="#skill">できること</a></li>
             <li><a href="work.html">制作物</a></li>
             <li><a href="about.html">自己紹介</a></li>
-            <li><a href="#contact">お問い合わせ</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
           </ul>
         </nav>
         <p class="copy">© 2024 y.kom All Rights Reserved.</p>
       </div>
+
+      <!-- トップページへ戻るボタン -->
+      <div class="toTop">
+        <a href="#header">
+          <div class="toTop__item">Page Top</div>
+        </a>
+      </div>
+
     </footer>
   </footer>
 
 
   <script>
+    // スクロールで現れるトップページへ戻るボタン
+    $(function () {
+      var pagetop = $('.toTop');
+      pagetop.hide();
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          pagetop.fadeIn();
+        } else {
+          pagetop.fadeOut();
+        }
+      });
+      pagetop.click(function () {
+        $('body, html').animate({ scrollTop: 0 }, 500);
+        return false;
+      });
+    });
+
     $(function () {
       //ハンバーガーメニュー
       $(".sp-menu__btn").on("click", function () {

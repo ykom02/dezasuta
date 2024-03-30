@@ -4,16 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>お問い合わせ | y.kom portfolio</title>
+  <title>課題 WORKERS 様 | y.kom portfolio</title>
 
   <link rel="stylesheet" href="./css/reset.css">
   <!-- slick -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-
+  <!-- lightbox -->
+  <link rel="stylesheet" href="./css/lightbox.min.css">
   <link rel="stylesheet" href="./css/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
   <!-- slick -->
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
@@ -35,9 +37,9 @@
       <nav class="header__nav">
         <ul>
           <li><a href="index.html#skill">できること</a></li>
-          <li><a href="work.html">制作物</a></li>
+          <li><a href="#">制作物</a></li>
           <li><a href="about.html">自己紹介</a></li>
-          <li><a href="#">お問い合わせ</a></li>
+          <li><a href="index.html#contact">お問い合わせ</a></li>
         </ul>
       </nav>
     </div>
@@ -53,48 +55,82 @@
           </h1>
         </li>
         <li><a href="index.html#skill">できること</a></li>
-        <li><a href="work.html">制作物</a></li>
+        <li><a href="#">制作物</a></li>
         <li><a href="about.html">自己紹介</a></li>
-        <li><a href="#">お問い合わせ</a></li>
+        <li><a href="index.html#contact">お問い合わせ</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="contact__main">
-    <h2 class="section__title contact__title">お問い合わせ</h2>
-    <p class="contact__page__text">ご質問やお仕事のご相談など、お気軽にご連絡ください。<br>
-      下記フォームにご記入後、送信をお願いいたします。<br>
-      2～3日中に返信いたします。</p>
+  <main class="work__item__main">
+    <!-- パンくずリスト -->
+    <div class="breadcrumb__area item__breadcrumb__area">
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb__item"><a href="index.html">TOP</a></li>
+          <li class="breadcrumb__item"><a href="work.html">制作一覧</a></li>
+          <li class="breadcrumb__item"><a href="#">トレース課題(LP)　WORKERS様</a></li>
+        </ol>
+      </nav>
+    </div>
 
-    <form
-      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfOYv5jmz_Ua3v8c1YisCkRclv2yauH8c7fWuELvAV5B2SNSA/formResponse"
-      method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
-
-      <div class="c-form__item">
-        <label class="c-form__label" for="field-name">お名前<span class="c-form__required">（必須）</span></label>
-        <input name="entry.193574675" class="c-form__input" id="field-name" type="text" required="required" />
+    <div class="detail">
+      <img src="./images/kadai4_komura.png" class="mockUp__img" alt="WORKERS様">
+      <div class="detail__area">
+        <h3 class="detail__title">トレース課題(LP)<br>
+          WORKERS 様</h3>
+        <div class="detail__wrapper">
+          <div class="detail__item">
+            <p class="detail__category">概要</p>
+            <p class="detail__text">スクール課題<span class="pc__only">　｜　</span><br class="sp">Illustratorの基礎操作を学ぶ</p>
+          </div>
+          <div class="detail__item">
+            <p class="detail__category">学んだこと</p>
+            <p class="detail__text">Illustratorの操作、Webデザインをする上での基礎知識</p>
+          </div>
+          <div class="detail__item">
+            <p class="detail__category">制作範囲・期間</p>
+            <p class="detail__text">トレース：約10日</p>
+          </div>
+          <div class="detail__item">
+            <p class="detail__category">使用ツール</p>
+            <p class="detail__text">Illustrator</p>
+          </div>
+        </div>
       </div>
+    </div>
+    <!-- PC表示 -->
+    <div class="item__img">
+      <img src="./images/kadai4_komura_pc.jpg" class="item__img__pc" alt="WORKERS様PC表示">
+      <img src="./images/kadai4_komura_sp.jpg" class="item__img__sp" alt="WORKERS様SP表示">
+    </div>
 
-      <div class="c-form__item">
-        <label class="c-form__label" for="field-mail">メールアドレス<span class="c-form__required">（必須）</span></label>
-        <input name="entry.899186120" class="c-form__input" id="field-mail" type="email" required="required" />
-      </div>
+    <!-- SP表示 -->
+    <div class="item__img item__sp">
+      <a href="./images/kadai4_komura_pc.jpg" data-lightbox="kadai4-pc" class="image__link">
+        <img src="./images/kadai4_komura_pc.jpg" class="item__img__pc" alt="WORKERS様PC表示">
+      </a>
+      <a href="./images/kadai4_komura_sp.jpg" data-lightbox="kadai4-sp" class="image__link">
+        <img src="./images/kadai4_komura_sp.jpg" class="item__img__sp" alt="WORKERS様SP表示">
+      </a>
+    </div>
 
-      <div class="c-form__item">
-        <label class="c-form__label" for="field-subject">件名</label>
-        <input name="entry.421886929" class="c-form__input" id="field-subject" type="text" />
-      </div>
-
-      <div class="c-form__item">
-        <label class="c-form__label" for="field-message">お問い合わせ内容<span class="c-form__required">（必須）</span></label>
-        <textarea name="entry.314744645" class="c-form__input" id="field-message"></textarea>
-      </div>
-
-      <div class="c-form__submit">
-        <button type="submit" class="more__button c-form__button">送信する</button>
-      </div>
-
-    </form>
+    <!-- ページネーションPC -->
+    <div class="pagination__area">
+      <ul class="pagination">
+        <li class="pagination__prev"><a href=""></a>戻る</li>
+        <li class="all__contents"><a href="work.html">制作一覧へ戻る</a></li>
+        <li class="pagination__next"><a href=""></a>進む</li>
+      </ul>
+    </div>
+    <!-- ページネーションSP -->
+    <div class="pagination__area pagination__area__sp">
+      <ul class="pagination pagination__sp">
+        <li class="pagination__prev"><a href=""></a></li>
+        <li class="all__contents"><a href="work.html">制作一覧に戻る</a></li>
+        <li class="pagination__next"><a href=""></a></li>
+      </ul>
+    </div>
     <picture>
       <source srcset="./images/pen_sen_sp@2x.png" media="(max-width: 767px)">
       <img src="./images/pen_sen_pc.png" alt="線画">
@@ -162,12 +198,9 @@
       });
     });
   </script>
+  <!-- lightbox -->
+  <script src="./js/lightbox.min.js"></script>
 
-  <script type="text/javascript">
-    let submitted = false;
-  </script>
-  <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
-    onload="if(submitted){window.location='thanks.html';}"></iframe>
 </body>
 
 </html>

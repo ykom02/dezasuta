@@ -45,7 +45,7 @@
           <li><a href="#skill">できること</a></li>
           <li><a href="work.html">制作物</a></li>
           <li><a href="about.html">自己紹介</a></li>
-          <li><a href="#contact">お問い合わせ</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
       </nav>
     </div>
@@ -63,7 +63,7 @@
         <li><a href="#skill">できること</a></li>
         <li><a href="work.html">制作物</a></li>
         <li><a href="about.html">自己紹介</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
       </ul>
     </nav>
   </header>
@@ -80,8 +80,10 @@
           ホームページを介して人と人をつなぐ
         </h3>
         <h4 class="concept__text">
-          「うまく言葉に出来ないけど･･･」に続く大事な部分を一緒に<br>
-          探して、訪れた人に伝わるホームページをつくります。
+          「うまく言葉に出来ないけど･･･」に続く<br class="tab">
+          大事な部分を一緒に<br class="pc">
+          探して、<br class="tab">
+          訪れた人に伝わるホームページをつくります。
         </h4>
       </div>
     </div>
@@ -135,7 +137,7 @@
         <div class="work__item">
           <div class="work__item__area">
             <a href="">
-              <img src="./images/kadai4_komura.jpg" class="work__item__img" alt="WORKERS様">
+              <img src="./images/kadai4_komura.png" class="work__item__img" alt="WORKERS様">
               <div class="hover__mask">
                 <p class="hover__mask__category">トレース</p>
                 <p class="hover__mask__tool">Illustrator</p>
@@ -214,7 +216,7 @@
         <!-- 1つ目 -->
         <div class="work__item">
           <div class="work__item__area">
-            <a href="">
+            <a href="kadai4.html">
               <img src="./images/kadai1_komura_banner.jpg" class="work__item__img" alt="キャンペーンバナー">
               <div class="hover__mask">
                 <p class="hover__mask__category">トレース</p>
@@ -321,9 +323,18 @@
       <h2 class="section__title">自己紹介</h2>
       <picture class="about__pic">
         <source srcset="./images/board_sen_sp@2x.png" media="(max-width: 767px)">
-        <source srcset="./images/board_sen_tab@2x.png" media="(max-width: 889px)">
+        <source srcset="./images/board_sen_tab@2x.png" media="(max-width: 1230px)" class="board__sen__tab">
+        <source srcset="./images/board_sen_long.png" media="(min-width: 1800px)">
         <img src="./images/board_sen_pc.png" class="board_sen" alt="線画">
       </picture>
+
+      <!-- <picture class="about__pic">
+        <source srcset="./images/board_sen_sp@2x.png" media="(max-width: 767px)">
+        <source srcset="./images/board_sen_long.png" media="(min-width: 1800px)">
+        <img src="./images/board_sen_pc.png" class="board_sen" alt="線画">
+      </picture> -->
+
+
       <div class="about__wrapper">
         <div class="about__inner">
           <div class="about__name">コムラ</div>
@@ -348,18 +359,25 @@
 
     <section class="contact" id="contact">
       <h2 class="section__title">お問い合わせ</h2>
-      <p class="contact__text">ご質問やお仕事のご依頼など、お気軽にご連絡ください。<br>
-        ご連絡は下記お問い合わせフォームよりご連絡をお願いいたします。
+      <p class="contact__text">ご質問やお仕事のご依頼など、<br class="sp">お気軽にご連絡ください。<br>
+        ご連絡は下記お問い合わせフォームより<br class="sp">ご連絡をお願いいたします。
       </p>
       <div class="button__container contact__button__container">
-        <a href="" class="more__button contact__more__button">お問い合わせはこちら</a>
+        <a href="contact.html" class="more__button contact__more__button">お問い合わせはこちら</a>
       </div>
-      <img src="./images/pen_sen_pc.png" alt="線画">
+      <picture>
+        <source srcset="./images/pen_sen_sp@2x.png" media="(max-width: 767px)">
+        <img src="./images/pen_sen_pc.png" alt="線画">
+      </picture>
     </section>
   </main>
+
   <footer>
     <footer class="footer__container">
-      <img src="./images/footer.png" alt="空">
+      <picture class="footer__bg">
+        <source srcset="./images/footer_sp@2x.png" media="(max-width: 767px)">
+        <img src="./images/footer.png" alt="空">
+      </picture>
       <div class="footer__inner">
         <h1 class="logo">
           <a href="./index.html">
@@ -372,51 +390,129 @@
             <li><a href="#skill">できること</a></li>
             <li><a href="work.html">制作物</a></li>
             <li><a href="about.html">自己紹介</a></li>
-            <li><a href="#contact">お問い合わせ</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
           </ul>
         </nav>
         <p class="copy">© 2024 y.kom All Rights Reserved.</p>
       </div>
+
+      <!-- トップページへ戻るボタン -->
+      <div class="toTop">
+        <a href="#header">
+          <div class="toTop__item">Page Top</div>
+        </a>
+      </div>
+
     </footer>
   </footer>
 
 
   <script>
+    // スクロールで現れるトップページへ戻るボタン
+    $(function () {
+      var pagetop = $('.toTop');
+      pagetop.hide();
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          pagetop.fadeIn();
+        } else {
+          pagetop.fadeOut();
+        }
+      });
+      pagetop.click(function () {
+        $('body, html').animate({ scrollTop: 0 }, 500);
+        return false;
+      });
+    });
+
     $(function () {
       //ハンバーガーメニュー
       $(".sp-menu__btn").on("click", function () {
         $(".sp-header__nav").fadeToggle();
         $(".sp-menu__btn").toggleClass("open");
       });
-      //スライドショー
-      $(".slider").slick({
-        variableWidth: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        prevArrow: '<div class="prev"></div>',
-        nextArrow: '<div class="next"></div>',
-        responsive: [
-          {
-            breakpoint: 1200, // 1199px以下のサイズに適用
-            settings: {
-              slidesToShow: 2,
-            },
-          }, {
-            breakpoint: 870, //869px以下のサイズに適用
-            settings: {
-              slidesToShow: 1,
-            },
-          },
-        ],
-      });
-      //画面サイズが再度870pxを超えた際にスライドショーを再開する
-      $(window).on("resize orientationchange", function () {
-        $(".slider").slick("resize");
-      });
+      // //スライドショー
+      // $(".slider").slick({
+      //   variableWidth: false,
+      //   slidesToShow: 3,
+      //   slidesToScroll: 1,
+      //   autoplay: true,
+      //   autoplaySpeed: 3000,
+      //   prevArrow: '<div class="prev"></div>',
+      //   nextArrow: '<div class="next"></div>',
+      //   responsive: [
+      //     {
+      //       breakpoint: 1200, // 1199px以下のサイズに適用
+      //       settings: {
+      //         slidesToShow: 2,
+      //       },
+      //     }, {
+      //       breakpoint: 870, //869px以下のサイズに適用
+      //       settings: {
+      //         slidesToShow: 1,
+      //       },
+      //     },
+      //   ],
+      // });
+      // //画面サイズが再度870pxを超えた際にスライドショーを再開する
+      // $(window).on("resize orientationchange", function () {
+      //   $(".slider").slick("resize");
+      // });
     });
+
+    //スライドショー
+    function initSlickSlider() {
+      var windowWidth = window.innerWidth;
+      if (windowWidth < 870) {
+        $(".slider").slick({
+          variableWidth: false,
+          autoplaySpeed: 3000,
+          autoplay: true,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          prevArrow: '<div class="prev"></div>',
+          nextArrow: '<div class="next"></div>',
+        });
+      } else if (windowWidth < 1200) {
+        $(".slider").slick({
+          variableWidth: false,
+          autoplaySpeed: 3000,
+          autoplay: true,
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          prevArrow: '<div class="prev"></div>',
+          nextArrow: '<div class="next"></div>',
+        });
+      } else {
+        $(".slider").slick({
+          variableWidth: false,
+          autoplaySpeed: 3000,
+          autoplay: true,
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          prevArrow: '<div class="prev"></div>',
+          nextArrow: '<div class="next"></div>',
+        });
+      }
+    }
+
+    //ウィンドウがリサイズされるたびにスライダーを再初期化します
+    $(window).on("resize", function () {
+      //既に初期化されているスライダーを破棄
+      if ($(".slider").hasClass("slick-initialized")) {
+        $(".slider").slick("unslick");
+      }
+      //スライダーを再初期化
+      initSlickSlider();
+    });
+
   </script>
+
+
+
 </body>
 
 </html>
