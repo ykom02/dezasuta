@@ -365,8 +365,9 @@ body {
 }
 
 .work__item__area {
-    width: 336px;
-    height: 280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
     background-color: #fff;
     border-radius: 7px;
     display: flex;
@@ -375,13 +376,21 @@ body {
 }
 
 .work__item__img {
-    width: 256px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
-.work__item__img__square {
-    width: 200px;
+@media screen and (min-width: 767px) {
+    .work__item {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+    .slider {
+        margin: 0 10px;
+    }
 }
-
 .work__item__bottom {
     position: relative;
     display: flex;
@@ -479,7 +488,7 @@ body {
 .next.slick-arrow {
     position: absolute;
     top: 40%;
-    right: 2px;
+    right: 18px;
 }
 
 .work__bottom .prev.slick-arrow {
@@ -541,7 +550,8 @@ body {
     padding-bottom: 270px;
 }
 
-.about__pic {
+/* 以下書き換え0331 */
+/* .about__pic {
     position: absolute;
     top: 105px;
     width: 100%;
@@ -553,7 +563,47 @@ body {
     display: flex;
     justify-content: center;
     gap: 15%;
+} */
+.about__pic {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 105px;
+    width: 100%;
 }
+
+.about__pic img {
+    object-fit: cover;
+    object-position: left;
+    height: 780px;
+}
+
+.about__wrapper {
+    /* max-width: 810px;
+    margin: 0 auto; */
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+}
+
+.about__inner {
+    width: 390px;
+    position: absolute;
+    left: 310px;
+}
+
+.about__img {
+    position: absolute;
+    width: 300px;
+    right: 20%;
+}
+@media screen and (max-width: 1360px) {
+    .about__img {
+        right: 10%;
+    }
+}
+/* ここまで書き換え0331 */
 
 .about__name {
     font-size: 18px;
@@ -596,7 +646,7 @@ body {
     }
     .about__wrapper {
         flex-direction: column;
-        padding-top: 85%;
+        padding-top: 80%;
         gap: 27px;
     }
     .about__inner {
@@ -609,7 +659,6 @@ body {
     }
     .about__sp__button__container {
         display: block;
-        padding-top: 60px;
     }
     .about__pc__button__container {
         display: none;
@@ -637,13 +686,96 @@ body {
     .about {
         padding-top: 250px;
     } */
-    .about__pic {
+
+    /* 以下書き換え0331 */
+    /* .about__pic {
         top: 360px;
+    } */
+    .about__pic img {
+        object-fit: cover;
+        object-position: -140px;
+        height: 700px;
     }
+    .about__inner {
+        left: 180px;
+    }
+    /* ここまで書き換え0331 */
     .about__wrapper {
         padding: 0 30px 0;
     }
 }
+
+/* 以下追加0331 */
+@media screen and (min-width: 768px) and (max-width: 1065px) {
+    .about__pic img {
+        object-position: -240px;
+    }
+    .about__inner {
+        left: 80px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 930px) {
+    .about__pic img {
+        object-position: -230px;
+        height: 650px;
+    }
+    .about__img {
+        width: 30%;
+        right: 5%;
+    }
+    .about__inner {
+        left: 50px;
+    }
+}
+@media screen and (min-width: 1480px) and (max-width: 1700px) {
+    .about__pic img {
+        object-position: -230px;
+    }
+}
+@media screen and (min-width: 1701px) {
+    .about__inner {
+        left: 560px;
+    }
+}
+@media screen and (min-width: 630px) and (max-width: 767px) {
+    .about {
+        padding-top: 280px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .about__pic img {
+        object-fit: unset;
+        object-position: unset;
+        height: auto;
+    }
+    .about__inner {
+        bottom: 640px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 30px;
+    }
+    .about__img {
+        bottom: 350px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 30px;
+    }
+    .about__sp__button__container {
+        padding-top: 580px;
+    }
+}
+@media screen and (min-width: 420px) and (max-width: 767px) {
+    .about__sp__button__container {
+        padding-top: 580px;
+    }
+}
+@media screen and (max-width: 419px) {
+    .about__sp__button__container {
+        padding-top: 410px;
+    }
+}
+
+/* ここまで追加0331 */
 
 /* @media screen and (min-width: 768px) and (max-width: 1200px) {
     img.board_sen {
@@ -669,6 +801,11 @@ body {
 /* お問い合わせ-------------------------------------------------------- */
 .contact {
     padding-top: 150px;
+}
+@media screen and (max-width: 767px) {
+    .contact {
+        padding-top: 0px;
+    }
 }
 
 .contact__text {
@@ -740,6 +877,13 @@ body {
     .footer__nav ul {
         padding-top: 0;
         padding-bottom: 0;
+    }
+}
+@media screen and (min-width: 1366px) {
+    .footer__img {
+        height: 420px;
+        object-fit: cover;
+        object-position: top;
     }
 }
 
@@ -824,37 +968,40 @@ body {
 .about__page__pic {
     top: 200px;
 }
-
-@media screen and (min-width: 890px) and (max-width: 1149px) {
+@media screen and (min-width: 768px) and (max-width: 1230px) {
     .about__page__pic img {
-        height: 606px;
         object-fit: cover;
+        object-position: -140px;
+        height: 700px;
     }
 }
-@media screen and (max-width: 889px) {
-    .about__page__pic {
-        top: 76px;
+@media screen and (min-width: 768px) and (max-width: 1065px) {
+    .about__page__pic img {
+        object-position: -240px;
     }
-    .about__page__wrapper {
-        padding-top: 200px;
+}
+@media screen and (min-width: 768px) and (max-width: 930px) {
+    .about__page__pic img {
+        object-position: -230px;
+        height: 650px;
     }
 }
 @media screen and (max-width: 767px) {
     .about__page {
         padding-top: 120px;
     }
-    .about__page > section {
-        padding-top: 0;
-        padding-bottom: 50px;
+    .about__title {
+        margin-top: -120px;
+        padding: 20px;
     }
     .about__page__pic {
         top: -10px;
     }
     .about__page__wrapper {
-        padding-top: 660px;
+        padding-top: 165%;
     }
 }
-@media screen and (max-width: 599px) {
+/* @media screen and (max-width: 599px) {
     .about__page__wrapper {
         padding-top: 550px;
     }
@@ -862,6 +1009,28 @@ body {
 @media screen and (max-width: 459px) {
     .about__page__wrapper {
         padding-top: 450px;
+    }
+    .about__page__inner {
+        bottom: 70px;
+    }
+    .about__page__img {
+        bottom: -230px;
+    }
+} */
+@media screen and (min-width: 500px) and (max-width: 689px) {
+    .about__title {
+        margin-top: -140px;
+    }
+    .about__wrapper.about__page__wrapper {
+        padding-top: 1150px;
+    }
+}
+@media screen and (max-width: 499px) {
+    h2.section__title.about__title {
+        margin-top: -170px;
+    }
+    .about__page__wrapper {
+        padding-top: 980px;
     }
 }
 
@@ -1313,16 +1482,16 @@ button.more__button:after {
     opacity: 0.9;
 }
 .lb-outerContainer {
-    width: 265px !important;
-    height: 2695px !important;
+    width: 70% !important;
+    height: auto !important;
     position: relative;
 }
 .lb-container {
     text-align: -webkit-center;
 }
 img.lb-image {
-    width: 265px !important;
-    height: 2695px !important;
+    width: 100% !important;
+    height: auto !important;
     border: none !important;
     border-radius: 0px !important;
 }
