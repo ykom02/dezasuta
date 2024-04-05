@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>課題 DESIGN CAFE 様 | y.kom portfolio</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <!-- lightbox -->
+  <link rel="stylesheet" href="./css/lightbox.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- slick -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</head>
+
+<body>
+  <header id="header">
+    <picture class="work-header__img">
+      <source srcset="./images/header_sp@2x-50.jpg" media="(max-width: 767px)">
+      <img src="images/header_pc-50.jpg" alt="空">
+    </picture>
+    <div class="header__inner work-header__inner">
+      <div class="logo">
+        <a href="./index.html">
+          <h1 class="logo__top">y.kom</h1>
+          <h2 class="logo__bottom">Portfolio</h2>
+        </a>
+      </div>
+      <nav class="header__nav">
+        <ul>
+          <li><a href="index.html#skill">できること</a></li>
+          <li><a href="work.html">制作物</a></li>
+          <li><a href="about.html">自己紹介</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="sp-menu__btn"><span></span></div>
+    <nav class="sp-header__nav">
+      <ul>
+        <li>
+          <div class="nav-logo">
+            <a href="./index.html">
+              <h1 class="logo__top">y.kom</h1>
+              <h2 class="logo__bottom">Portfolio</h2>
+            </a>
+          </div>
+        </li>
+        <li><a href="index.html#skill">できること</a></li>
+        <li><a href="work.html">制作物</a></li>
+        <li><a href="about.html">自己紹介</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="work__item__main">
+    <!-- パンくずリスト -->
+    <div class="breadcrumb__area item__breadcrumb__area">
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb__item"><a href="index.html">TOP</a></li>
+          <li class="breadcrumb__item"><a href="work.html">制作一覧</a></li>
+          <li class="breadcrumb__item"><a href="#">コーディング課題(LP)　DESIGN CAFE 様</a></li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="detail">
+      <img src="./images/designcafe_komura.png" class="mockUp__img" alt="DESIGN CAFE様">
+      <div class="detail__area">
+        <h3 class="detail__title detail__title__long">コーディング課題<br class="sp">(LP)<br>
+          DESIGN CAFE 様</h3>
+        <div class="detail__wrapper">
+          <div class="detail__item">
+            <p class="detail__category">概要</p>
+            <p class="detail__text">スクール課題<span class="pc__only">　｜　</span><br
+                class="sp">デザインデータをもとにレスポンシブ対応したサイトのコーディングをする</p>
+          </div>
+          <div class="detail__item">
+            <p class="detail__category">学んだこと</p>
+            <ul class="detail__text">
+              <li>デザインカンプから必要情報を確認する方法</li>
+              <li>レスポンシブ対応を意識したコーディングを心がけ作業を進めること</li>
+              <li>HTML、CSSについて</li>
+              <li>jQueryを用いたハンバーガーメニューやカルーセルスライダー、Lightboxの実装</li>
+              <li>Google Mapの埋め込み方法</li>
+            </ul>
+          </div>
+          <div class="detail__item">
+            <p class="detail__category">制作範囲・期間</p>
+            <p class="detail__text">コーディング：約3週間</p>
+          </div>
+          <div class="detail__item">
+            <p class="detail__category">使用ツール</p>
+            <p class="detail__text">Illustrator、Visual Studio Code</p>
+          </div>
+          <div class="detail__item">
+            <p class="detail__category">URL</p>
+            <a href="./designcafe/index.html">
+              <p class="detail__text">oooooooooooooooooo</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PC表示 -->
+    <div class="item__img">
+      <img src="./images/designcafe_pc.jpg" class="item__img__pc" alt="DESIGN CAFE様PC表示">
+      <img src="./images/designcafe_sp.jpg" class="item__img__sp" alt="DESIGN CAFE様SP表示">
+    </div>
+
+    <!-- SP表示 -->
+    <div class="item__img item__sp">
+      <a href="./images/designcafe_pc.jpg" data-lightbox="kadai-pc" class="image__link">
+        <img src="./images/designcafe_pc.jpg" class="item__img__pc" alt="DESIGN CAFE様PC表示">
+      </a>
+      <a href="./images/designcafe_sp.jpg" data-lightbox="kadai-sp" class="image__link">
+        <img src="./images/designcafe_sp.jpg" class="item__img__sp" alt="DESIGN CAFE様SP表示">
+      </a>
+    </div>
+
+    <!-- ページネーションPC -->
+    <div class="pagination__area">
+      <ul class="pagination">
+        <li class="pagination__prev"><a href="kadai5.html">戻る</a></li>
+        <li class="all__contents"><a href="work.html">制作一覧へ戻る</a></li>
+        <li class="pagination__next"><a href="portfolio.html">進む</a></li>
+      </ul>
+    </div>
+    <!-- ページネーションSP -->
+    <div class="pagination__area pagination__area__sp">
+      <ul class="pagination pagination__sp">
+        <li class="pagination__prev"><a href="kadai5.html"></a></li>
+        <li class="all__contents"><a href="work.html">制作一覧に戻る</a></li>
+        <li class="pagination__next"><a href="portfolio.html"></a></li>
+      </ul>
+    </div>
+    <picture>
+      <source srcset="./images/pen_sen_sp@2x.png" media="(max-width: 767px)">
+      <img src="./images/pen_sen_pc.png" alt="線画">
+    </picture>
+  </main>
+
+  <footer>
+    <div class="footer__container">
+      <picture class="footer__bg">
+        <source srcset="./images/footer_sp@2x.png" media="(max-width: 767px)">
+        <img src="./images/footer.png" alt="空">
+      </picture>
+      <div class="footer__inner">
+        <div class="logo">
+          <a href="./index.html">
+            <h1 class="logo__top">y.kom</h1>
+            <h2 class="logo__bottom">Portfolio</h2>
+          </a>
+        </div>
+        <nav class="footer__nav">
+          <ul>
+            <li><a href="index.html#skill">できること</a></li>
+            <li><a href="work.html">制作物</a></li>
+            <li><a href="about.html">自己紹介</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <p class="copy">© 2024 y.kom All Rights Reserved.</p>
+      </div>
+
+      <!-- トップページへ戻るボタン -->
+      <div class="toTop">
+        <a href="#header">
+          <div class="toTop__item">Page Top</div>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script>
+    // スクロールで現れるトップページへ戻るボタン
+    $(function () {
+      var pagetop = $('.toTop');
+      pagetop.hide();
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          pagetop.fadeIn();
+        } else {
+          pagetop.fadeOut();
+        }
+      });
+      pagetop.click(function () {
+        $('body, html').animate({ scrollTop: 0 }, 500);
+        return false;
+      });
+    });
+
+    $(function () {
+      //ハンバーガーメニュー
+      $(".sp-menu__btn").on("click", function () {
+        $(".sp-header__nav").fadeToggle();
+        $(".sp-menu__btn").toggleClass("open");
+      });
+    });
+  </script>
+  <!-- lightbox -->
+  <script src="./js/lightbox.min.js"></script>
+
+
+  <script>
+    // モーダルウィンドウオープン時の背景固定
+    $(function () {
+      let scrollPosition;
+      $(".js-modal-open").on("click", function () {
+        scrollPosition = $(window).scrollTop();
+        $("body").addClass("fixed").css({ top: -scrollPosition });
+      });
+      $(".js-modal-close").on("click", function () {
+        $("body").removeClass("fixed").css({ top: 0 });
+        window.scrollTo(0, scrollPosition);
+      });
+    });
+  </script>
+</body>
+
+</html>

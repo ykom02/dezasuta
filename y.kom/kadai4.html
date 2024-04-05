@@ -28,18 +28,18 @@
       <img src="images/header_pc-50.jpg" alt="空">
     </picture>
     <div class="header__inner work-header__inner">
-      <h1 class="logo">
+      <div class="logo">
         <a href="./index.html">
-          <p class="logo__top">y.kom</p>
-          <p class="logo__bottom">Portfolio</p>
+          <h1 class="logo__top">y.kom</h1>
+          <h2 class="logo__bottom">Portfolio</h2>
         </a>
-      </h1>
+      </div>
       <nav class="header__nav">
         <ul>
           <li><a href="index.html#skill">できること</a></li>
-          <li><a href="#">制作物</a></li>
+          <li><a href="work.html">制作物</a></li>
           <li><a href="about.html">自己紹介</a></li>
-          <li><a href="index.html#contact">お問い合わせ</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
       </nav>
     </div>
@@ -47,17 +47,17 @@
     <nav class="sp-header__nav">
       <ul>
         <li>
-          <h1 class="nav-logo">
+          <div class="nav-logo">
             <a href="./index.html">
-              <p class="logo__top">y.kom</p>
-              <p class="logo__bottom">Portfolio</p>
+              <h1 class="logo__top">y.kom</h1>
+              <h2 class="logo__bottom">Portfolio</h2>
             </a>
-          </h1>
+          </div>
         </li>
         <li><a href="index.html#skill">できること</a></li>
-        <li><a href="#">制作物</a></li>
+        <li><a href="work.html">制作物</a></li>
         <li><a href="about.html">自己紹介</a></li>
-        <li><a href="index.html#contact">お問い合わせ</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
       </ul>
     </nav>
   </header>
@@ -107,28 +107,28 @@
 
     <!-- SP表示 -->
     <div class="item__img item__sp">
-      <a href="./images/kadai4_komura_pc.jpg" data-lightbox="kadai4-pc" class="image__link">
+      <a href="./images/kadai4_komura_pc.jpg" data-lightbox="kadai-pc" class="image__link">
         <img src="./images/kadai4_komura_pc.jpg" class="item__img__pc" alt="WORKERS様PC表示">
       </a>
-      <a href="./images/kadai4_komura_sp.jpg" data-lightbox="kadai4-sp" class="image__link">
+      <a href="./images/kadai4_komura_sp.jpg" data-lightbox="kadai-sp" class="image__link">
         <img src="./images/kadai4_komura_sp.jpg" class="item__img__sp" alt="WORKERS様SP表示">
       </a>
     </div>
 
     <!-- ページネーションPC -->
     <div class="pagination__area">
-      <ul class="pagination">
-        <li class="pagination__prev"><a href=""></a>戻る</li>
+      <ul class="pagination pagination__top">
+        <li class="pagination__prev pagination__prev__top"><a href="">戻る</a></li>
         <li class="all__contents"><a href="work.html">制作一覧へ戻る</a></li>
-        <li class="pagination__next"><a href=""></a>進む</li>
+        <li class="pagination__next"><a href="kadai5.html">進む</a></li>
       </ul>
     </div>
     <!-- ページネーションSP -->
     <div class="pagination__area pagination__area__sp">
-      <ul class="pagination pagination__sp">
-        <li class="pagination__prev"><a href=""></a></li>
+      <ul class="pagination pagination__top pagination__sp">
+        <li class="pagination__prev pagination__prev__top"><a href=""></a></li>
         <li class="all__contents"><a href="work.html">制作一覧に戻る</a></li>
-        <li class="pagination__next"><a href=""></a></li>
+        <li class="pagination__next"><a href="kadai5.html"></a></li>
       </ul>
     </div>
     <picture>
@@ -138,21 +138,21 @@
   </main>
 
   <footer>
-    <footer class="footer__container">
+    <div class="footer__container">
       <picture class="footer__bg">
         <source srcset="./images/footer_sp@2x.png" media="(max-width: 767px)">
         <img src="./images/footer.png" alt="空">
       </picture>
       <div class="footer__inner">
-        <h1 class="logo">
+        <div class="logo">
           <a href="./index.html">
-            <p class="logo__top">y.kom</p>
-            <p class="logo__bottom">Portfolio</p>
+            <h1 class="logo__top">y.kom</h1>
+            <h2 class="logo__bottom">Portfolio</h2>
           </a>
-        </h1>
+        </div>
         <nav class="footer__nav">
           <ul>
-            <li><a href="#skill">できること</a></li>
+            <li><a href="index.html#skill">できること</a></li>
             <li><a href="work.html">制作物</a></li>
             <li><a href="about.html">自己紹介</a></li>
             <li><a href="contact.html">お問い合わせ</a></li>
@@ -168,7 +168,7 @@
         </a>
       </div>
 
-    </footer>
+    </div>
   </footer>
 
 
@@ -198,9 +198,53 @@
       });
     });
   </script>
+
+
   <!-- lightbox -->
   <script src="./js/lightbox.min.js"></script>
 
+  <script>
+    $(function () {
+      $(".lightboxOverlay").css("display", "block")
+    },
+
+      // 背景を固定してスクロールさせない
+      $('html, body').css('overflow', 'hidden')
+      // 背景を固定してスクロールさせない
+    );
+
+    $(function () {
+      $(".lightboxOverlay").css("display", "none")
+    },
+      // 背景の固定を解除する
+      $('html, body').removeAttr('style')
+      // 背景の固定を解除する
+    );
+
+    // モーダルウィンドウオープン時の背景固定
+    // $(function () {
+    //   let scrollPosition;
+    //   $("#lightboxOverlay").on("click", function () {
+    //     scrollPosition = $(window).scrollTop();
+    //     $("body").addClass("fixed").css({ top: -scrollPosition });
+    //   });
+    //   $(".lb-closeContainer").on("click", function () {
+    //     $("body").removeClass("fixed").css({ top: 0 });
+    //     window.scrollTo(0, scrollPosition);
+    //   });
+    // });
+
+    // function bodyFreeze() {
+    //   if ($('body').css('position') === 'fixed') return;
+    //   var scrTop = $(window).scrollTop();
+    //   $('body').css({ position: 'fixed', top: -scrTop }).data('scrTop', scrTop);
+    // }
+    // function bodyRelease() {
+    //   if ($('body').css('position') !== 'fixed') return;
+    //   var scrTop = $('body').css({ position: '', top: '' }).data('scrTop');
+    //   $(window).scrollTop(scrTop);
+    // }
+  </script>
 </body>
 
 </html>
