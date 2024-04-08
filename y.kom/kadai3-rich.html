@@ -7,17 +7,10 @@
   <title>課題 架空広告バナー01 | y.kom portfolio</title>
 
   <link rel="stylesheet" href="./css/reset.css">
-  <!-- slick -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-  <!-- lightbox -->
-  <link rel="stylesheet" href="./css/lightbox.min.css">
+
   <link rel="stylesheet" href="./css/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-  <!-- slick -->
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </head>
 
@@ -195,24 +188,7 @@
       });
     });
   </script>
-  <!-- lightbox -->
-  <script src="./js/lightbox.min.js"></script>
 
-
-  <script>
-    // モーダルウィンドウオープン時の背景固定
-    $(function () {
-      let scrollPosition;
-      $(".js-modal-open").on("click", function () {
-        scrollPosition = $(window).scrollTop();
-        $("body").addClass("fixed").css({ top: -scrollPosition });
-      });
-      $(".js-modal-close").on("click", function () {
-        $("body").removeClass("fixed").css({ top: 0 });
-        window.scrollTo(0, scrollPosition);
-      });
-    });
-  </script>
 </body>
 
 </html>

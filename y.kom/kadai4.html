@@ -7,17 +7,11 @@
   <title>課題 WORKERS 様 | y.kom portfolio</title>
 
   <link rel="stylesheet" href="./css/reset.css">
-  <!-- slick -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-  <!-- lightbox -->
-  <link rel="stylesheet" href="./css/lightbox.min.css">
+
   <link rel="stylesheet" href="./css/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-  <!-- slick -->
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </head>
 
@@ -107,12 +101,15 @@
 
     <!-- SP表示 -->
     <div class="item__img item__sp">
-      <a href="./images/kadai4_komura_pc.jpg" data-lightbox="kadai-pc" class="image__link">
-        <img src="./images/kadai4_komura_pc.jpg" class="item__img__pc" alt="WORKERS様PC表示">
-      </a>
-      <a href="./images/kadai4_komura_sp.jpg" data-lightbox="kadai-sp" class="image__link">
-        <img src="./images/kadai4_komura_sp.jpg" class="item__img__sp" alt="WORKERS様SP表示">
-      </a>
+      <img src="./images/kadai4_komura_pc.jpg" class="item__img__pc image__link" alt="WORKERS様PC表示">
+      <img src="./images/kadai4_komura_sp.jpg" class="item__img__sp image__link" alt="WORKERS様SP表示">
+    </div>
+
+    <!-- モーダルコンテンツ -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
     </div>
 
     <!-- ページネーションPC -->
@@ -200,50 +197,31 @@
   </script>
 
 
-  <!-- lightbox -->
-  <script src="./js/lightbox.min.js"></script>
-
+  <!-- モーダルウィンドウ -->
   <script>
-    $(function () {
-      $(".lightboxOverlay").css("display", "block")
-    },
+    $(document).ready(function () {
+      //画像をクリックした時の処理
+      $('.image__link').click(function () {
+        var src = $(this).attr('src');
+        $('#img01').attr('src', src);
+        $('#myModal').fadeIn(); //モーダルをフェードインで表示
+        $('body').css('overflow', 'hidden'); //背景のスクロールを禁止
+      });
 
-      // 背景を固定してスクロールさせない
-      $('html, body').css('overflow', 'hidden')
-      // 背景を固定してスクロールさせない
-    );
+      //クローズボタンをクリックした時の処理
+      $('.close').click(function () {
+        $('#myModal').fadeOut(); //モーダルをフェードアウトで非表示
+        $('body').css('overflow', ''); //背景のスクロールを再び有効にする
+      });
 
-    $(function () {
-      $(".lightboxOverlay").css("display", "none")
-    },
-      // 背景の固定を解除する
-      $('html, body').removeAttr('style')
-      // 背景の固定を解除する
-    );
-
-    // モーダルウィンドウオープン時の背景固定
-    // $(function () {
-    //   let scrollPosition;
-    //   $("#lightboxOverlay").on("click", function () {
-    //     scrollPosition = $(window).scrollTop();
-    //     $("body").addClass("fixed").css({ top: -scrollPosition });
-    //   });
-    //   $(".lb-closeContainer").on("click", function () {
-    //     $("body").removeClass("fixed").css({ top: 0 });
-    //     window.scrollTo(0, scrollPosition);
-    //   });
-    // });
-
-    // function bodyFreeze() {
-    //   if ($('body').css('position') === 'fixed') return;
-    //   var scrTop = $(window).scrollTop();
-    //   $('body').css({ position: 'fixed', top: -scrTop }).data('scrTop', scrTop);
-    // }
-    // function bodyRelease() {
-    //   if ($('body').css('position') !== 'fixed') return;
-    //   var scrTop = $('body').css({ position: '', top: '' }).data('scrTop');
-    //   $(window).scrollTop(scrTop);
-    // }
+      //モーダルの外側をクリックした場合にもモーダルを閉じる処理
+      $('#myModal').click(function (event) {
+        if (event.target === this) {
+          $(this).fadeOut(); //モーダルをフェードで非表示
+          $('body').css('overflow', ''); //背景のスクロールを再び有効にする
+        }
+      });
+    });
   </script>
 </body>
 
