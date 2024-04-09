@@ -70,7 +70,7 @@ body {
 }
 
 .logo__top {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: normal;
     line-height: 1;
 }
@@ -202,7 +202,7 @@ body {
     writing-mode: vertical-rl;
     right: 5px;
     bottom: 200px;
-    z-index: 9999;
+    z-index: 9997;
 }
 
 .toTop__item {
@@ -382,6 +382,7 @@ body {
 
 .skill__inner__tool__design {
     padding-top: 37px;
+    width: 280px;
 }
 
 .skill__inner__tool__coding {
@@ -1530,7 +1531,7 @@ button.more__button:after {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 9999;
     padding-top: 100px;
     padding-bottom: 100px;
     left: 0;

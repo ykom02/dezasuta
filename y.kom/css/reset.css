@@ -30,6 +30,8 @@ a {
     /*色を消す*/
     color: inherit;
     transition: 0.3s;
+    /* URLの改行 */
+    word-wrap: break-word;
 }
 
 a:hover {
